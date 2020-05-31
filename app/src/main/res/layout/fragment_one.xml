@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentOne">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="64dp">
+
+        <Button
+            android:id="@+id/btn_choose_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/shape_message_item"
+            android:padding="10dp"
+            android:text="@string/time_picker"
+            android:textColor="@color/selector_text"
+            app:layout_constraintBottom_toTopOf="@id/tv_time_picked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_time_picked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_choose_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_choose_time" />
+
+        <Button
+            android:id="@+id/btn_choose_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/shape_message_item"
+            android:padding="10dp"
+            android:text="@string/date_picker"
+            android:textColor="@color/selector_text"
+            app:layout_constraintBottom_toTopOf="@id/tv_date_picked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_picked" />
+
+        <TextView
+            android:id="@+id/tv_date_picked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_create_alarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_choose_date" />
+
+        <Button
+            android:id="@+id/btn_create_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/shape_message_item"
+            android:padding="10dp"
+            android:text="@string/create_alarm"
+            android:textColor="@color/selector_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_date_picked" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
